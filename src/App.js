@@ -2,6 +2,7 @@ import { Component } from "react";
 import "./App.css";
 import CardList from "./components/card-list/card-list.component";
 import SearchBox from "./components/search-box/search-box.component";
+
 // The functional component is the same as the class component since they are rendering the same thing. However, in class component, you tell react specifically what you want react to render by overridding the render() method.
 class App extends Component {
   // constructor is always called first and build the foundation for the class with attributes.
@@ -49,6 +50,7 @@ class App extends Component {
 
     return (
       <div className="App">
+        <h1 className="app-title">Monsters Rolodex</h1>
         {/* <input
           className="search-box"
           type="search"
@@ -63,7 +65,7 @@ class App extends Component {
         <SearchBox
           onChangeHandler={onSearchChange}
           placeholder="search monsters"
-          className="search-box"
+          className="monsters-search-box"
         />
         <CardList monsters={filteredMonsters} />
       </div>
